@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <h4 id="new"></h4>
+
+  <script>
+
+        var name = "Sherkhan Zhunusbay";
+        var group ="CS-2111";
+        document.getElementById("new").innerHTML = "Task 1: " + name + " " + group;
+      </script>
+  <div id="current_date_time_block"></div>
+
+<script type="text/javascript">
+
+
+    function zero_first_format(value)
+    {
+        if (value < 10)
+        {
+            value='0'+value;
+        }
+        return value;
+    }
+
+    function date_time()
+    {
+        var current_datetime = new Date();
+        var day = zero_first_format(current_datetime.getDate());
+        var month = zero_first_format(current_datetime.getMonth()+1);
+        var year = current_datetime.getFullYear();
+        var hours = zero_first_format(current_datetime.getHours());
+        var minutes = zero_first_format(current_datetime.getMinutes());
+        var seconds = zero_first_format(current_datetime.getSeconds());
+
+        return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+    }
+
+    document.getElementById('current_date_time_block').innerHTML = date_time();
+</script>
+  <div id="current_date_time_block2"></div>
+
+<script type="text/javascript">
+
+  
+    setInterval(function () {
+        document.getElementById('current_date_time_block2').innerHTML = date_time();
+    }, 1000);
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">freedom time</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+          <script src="//megatimer.ru/get/1e25c810f1703b553546a28fcaf49805.js"></script>
+          <div><center><big>Time until graduation</big></center></div>>
+
+    </header>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+    <form>
+        1st Number : <input type="text" id="firstnumber" /><br>
+        2nd Number: <input type="text" id="secondnumber" /><br>
+
+        <input type="button" onClick="multiplyBy()" Value="Multiply" />
+        <input type="button" onClick="divideBy()" Value="Divide" />
+    </form>
+
+    <p>The Result is : <br>
+        <span id = "result"></span>
+    </p>
+
+    <script type="text/javascript">
+
+     function multiplyBy()
+     {
+        num1 = document.getElementById("firstnumber").value;
+        num2 = document.getElementById("secondnumber").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+    }
+
+    function divideBy()
+    {
+        num1 = document.getElementById("firstnumber").value;
+        num2 = document.getElementById("secondnumber").value;
+        document.getElementById("result").innerHTML = num1 / num2;
+    }
+</script>
+</body>
+</html>
